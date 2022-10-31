@@ -11,8 +11,10 @@ namespace _Main.C_Scripts.Tomi
 
        //Artifatc´s Particle VFX
        [SerializeField] private ParticleSystem pickUpParticle;
-
+       
+       // Artifact´s audio and game Object references:
        public GameObject artifact;
+       [SerializeField] private AudioSource pickUpSound;
        
 
       void Update()
@@ -25,8 +27,10 @@ namespace _Main.C_Scripts.Tomi
         {
             //Collectable´s deactivation, collectable´s effect.
                 Debug.Log("Artifatc Found!");
+                pickUpSound.Play();
                 artifact.SetActive(false);
                 pickUpParticle.Play();
+                
             
         }
     }
