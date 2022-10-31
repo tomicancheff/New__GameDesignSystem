@@ -12,12 +12,10 @@ namespace _Main.C_Scripts.Tomi
        //Artifatc´s Particle VFX
        [SerializeField] private ParticleSystem pickUpParticle;
 
-       private void Start()
-       {
-           //Stuff
-       }
+       public GameObject artifact;
+       
 
-       void Update()
+      void Update()
         {
             //Artifact´s Rotating Movement
          transform.Rotate((_rotation * (_speed * Time.deltaTime)));
@@ -27,7 +25,7 @@ namespace _Main.C_Scripts.Tomi
         {
             //Collectable´s deactivation, collectable´s effect.
                 Debug.Log("Artifatc Found!");
-                Destroy(gameObject, 1f);
+                artifact.SetActive(false);
                 pickUpParticle.Play();
             
         }
