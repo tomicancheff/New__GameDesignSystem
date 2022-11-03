@@ -292,9 +292,10 @@ GameObject:
   - component: {fileID: 5969700215744446405}
   - component: {fileID: 5969700215753785343}
   - component: {fileID: 5969700216081918315}
+  - component: {fileID: 5946505342652330083}
   m_Layer: 7
   m_Name: Golbin_Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -365,6 +366,22 @@ CapsuleCollider:
   m_Height: 1.9798611
   m_Direction: 1
   m_Center: {x: 0.038212735, y: 0.86800855, z: 0.075069554}
+--- !u!54 &5946505342652330083
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5969700215744106065}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5969700215744106993
 GameObject:
   m_ObjectHideFlags: 0

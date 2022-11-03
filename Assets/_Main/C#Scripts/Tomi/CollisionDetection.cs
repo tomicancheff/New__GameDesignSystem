@@ -1,25 +1,27 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using _Main.C_Scripts.Tomi;
 using UnityEngine;
 
-public class CollisionDetection : MonoBehaviour
+namespace _Main.C_Scripts.Tomi
 {
-    [SerializeField] private PlayerAttack weapon;
-    [SerializeField] private GameObject hitParticle;
-    private static readonly int Hit = Animator.StringToHash("Hit");
-
-
-    private void OnTriggerEnter(Collider other)
+    public class CollisionDetection : MonoBehaviour
     {
-        if (other.CompareTag("Enemy") && weapon.isAttacking)
+        [SerializeField] private PlayerAttack weapon;
+        [SerializeField] private GameObject hitParticle;
+        private static readonly int Hit = Animator.StringToHash("Hit");
+
+        [SerializeField] private int attackDamage = 20;
+        
+
+        private void OnTriggerEnter(Collider other)
         {
-            other.GetComponent<Animator>().SetTrigger(Hit);
-            Debug.Log(other.name);
-            Instantiate(hitParticle, new Vector3(other.transform.position.x, transform.position.y,
-                other.transform.position.z), other.transform.rotation);
+            if (other.CompareTag("Enemy") && weapon.isAttacking)
+            {
+                other.GetComponent<Animator>().SetTrigger(Hit);
+                other.GetComponent<Enemy>().TakeDamage(attackDamage);
+                Debug.Log(other.name);
+                Instantiate(hitParticle, new Vector3(other.transform.position.x, transform.position.y,
+                    other.transform.position.z), other.transform.rotation);
             
+            }
         }
     }
 }

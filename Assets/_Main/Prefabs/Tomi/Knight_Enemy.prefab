@@ -2651,6 +2651,7 @@ GameObject:
   - component: {fileID: 4261968433132133080}
   - component: {fileID: 4261968433124811274}
   - component: {fileID: 3201284222584820668}
+  - component: {fileID: 1306755870}
   m_Layer: 0
   m_Name: Knight_Enemy
   m_TagString: Enemy
@@ -2740,6 +2741,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1306755870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4261968433124957728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c623e84e66442842b26a866f68e3d78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 4261968433132133080}
+  maxHealth: 100
+  currentHealth: 100
 --- !u!1 &4261968433124962640
 GameObject:
   m_ObjectHideFlags: 0
