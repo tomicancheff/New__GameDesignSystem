@@ -8,6 +8,9 @@ namespace _Main.C_Scripts.Tomi
         //Artifact´s Rotation 
         [SerializeField] private Vector3 _rotation;
         [SerializeField] private float _speed;
+        
+        //Artifact´s Viewpoint references:
+        //[SerializeField] private GameObject viewPoint;
 
        //Artifatc´s Particle VFX
        [SerializeField] private ParticleSystem pickUpParticle;
@@ -29,6 +32,7 @@ namespace _Main.C_Scripts.Tomi
                 Debug.Log("Artifatc Found!");
                 pickUpSound.Play();
                 artifact.SetActive(false);
+               // viewPoint.SetActive(false);
                 pickUpParticle.Play();
                 
             
