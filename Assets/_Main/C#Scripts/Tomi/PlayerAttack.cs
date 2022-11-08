@@ -20,6 +20,7 @@ namespace _Main.C_Scripts.Tomi
         [SerializeField] private AudioClip axeAttackSound;
         
         
+        
         //WEAPON ATTACK  TRIGGER
         public bool canAttack = true;
         public float attackCoolDown = 1.0f;
